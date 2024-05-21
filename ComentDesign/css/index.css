@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto; /* Baris pertama fleksibel, baris kedua auto (footer) */
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background: #008080;
+    padding: 20px;
+    font-family: monospace;
+    width: 1000px;
+    box-shadow: 0 0 5px #000;
+    margin: auto; /* Pusatkan kontainer secara horizontal */
+    margin-bottom: 20px; /* Beri jarak dari footer */
+}
+
+.head {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.text {
+    margin: 10px 0;
+    font-family: sans-serif;
+    font-size: 0.9em;
+    color: white;
+}
+
+.commentbox {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    color: #fff;
+}
+
+.commentbox > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content {
+    width: 100%;
+}
+
+.user {
+    border: none;
+    outline: none;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 52%;
+    height: 10%;
+    
+}
+
+.commentinput > textarea {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    border-bottom: 2px solid blue;
+    margin-bottom: 10px;
+    width: 50%;
+    height: 100px; /* Atur tinggi sesuai kebutuhan */
+    resize: vertical; /* Memungkinkan pengguna untuk mengubah ukuran vertikal */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding-bottom: 50px;
+}
+
+.buttons > button {
+    padding: 5px 10px;
+    background: white;
+    color: black;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.buttons > button.abled {
+    background: blue;
+    color: #fff;
+}
+
+.parents {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.parents h1 {
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.parents p {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.parents > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.engagements {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.engagements img {
+    width: 20px;
+}
+
+.engagements img:nth-child(1) {
+    margin-right: 10px;
+    width: 25px;
+}
+
+.date {
+    color: black;
+    font-size: 0.8em;
+}
+
+.rating {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.star {
+    font-size: 2em;
+    color: #d3d3d3;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star:hover,
+.star.hover,
+.star.selected {
+    color: #ffcc00;
+}
+
+.rating-value {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #353935;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+    .commentbox {
+        flex-direction: column;
+        align-items: center;
+    }
+    .commentbox > img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .content {
+        width: 100%;
+    }
+    .user {
+        width:  100%;
+        margin-left: 0;
+    }
+    .commentinput > textarea {
+        width: 97%;
+    }
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .buttons > button {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+    .head {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    .text {
+        font-size: 0.8em;
+    }
+    .buttons > button {
+        font-size: 0.8em;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmokeLess</title>
+</head>
+    <body>
+        <div class="container">
+            <div class="head"><h1>Post a Comment</h1></div>
+            <div><span id="comment">0</span> Comments</div>
+            <div class="text"><p>We are happy to hear from you</p></div>
+            
+            <div class="commentbox">
+                <img src="/image/user1.png" alt="">
+                <div class="content">
+                    <h2>Comment as: </h2>
+                    <input type="text" placeholder="Enter your name" class="user">
+    
+                    <div class="commentinput">
+                        <textarea type="text" placeholder="Enter comment" class="usercomment"></textarea>
+
+                        <div class="rating">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
+                        
+                        <p class="rating-value">Rating: <span id="ratingValue">0</span></p>
+
+                        <div class="buttons">
+                            <button type="submit" disabled id="publish">Publish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comments"></div>
+        </div>
+    </body>
+    <footer>
+        &copy; 2024 Your Company. All rights reserved.
+    </footer>
+    <script src="/js/java.js"></script>
+</html>

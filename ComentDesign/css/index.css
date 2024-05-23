@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
 * {
     margin: 0;
     padding: 0;
@@ -7,38 +9,46 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto; /* Baris pertama fleksibel, baris kedua auto (footer) */
-    background: #f2f2f2;
+    background: red;
     font-family: Arial, sans-serif;
 }
 
 .container {
-    background: #008080;
+    background: white;
     padding: 20px;
     font-family: monospace;
-    width: 1000px;
+    width: 100%;
     box-shadow: 0 0 5px #000;
+    box-sizing: border-box;
     margin: auto; /* Pusatkan kontainer secara horizontal */
-    margin-bottom: 20px; /* Beri jarak dari footer */
 }
 
 .head {
     text-transform: uppercase;
     margin-bottom: 20px;
-    color: #fff;
+    color: black;
 }
 
 .text {
     margin: 10px 0;
     font-family: sans-serif;
     font-size: 0.9em;
-    color: white;
+    color: black;
+}
+
+.comment {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    margin: auto; /* Pusatkan kontainer secara horizontal */
+    box-shadow: 0 0 5px #000;
 }
 
 .commentbox {
     display: flex;
     justify-content: space-around;
     padding: 10px;
-    color: #fff;
+    color: black;
 }
 
 .commentbox > img {
@@ -56,20 +66,18 @@ body {
 
 .user {
     border: none;
-    outline: none;
+    outline: solid;
     margin: 10px 0;
     border-radius: 5px;
     width: 52%;
     height: 10%;
-    
 }
 
 .commentinput > textarea {
     border: none;
     border-radius: 5px;
     padding: 10px;
-    outline: none;
-    border-bottom: 2px solid blue;
+    outline: solid;
     margin-bottom: 10px;
     width: 50%;
     height: 100px; /* Atur tinggi sesuai kebutuhan */
@@ -86,7 +94,7 @@ body {
 
 .buttons > button {
     padding: 5px 10px;
-    background: white;
+    background: #008080;
     color: black;
     text-transform: uppercase;
     border: none;
@@ -101,20 +109,28 @@ body {
     color: #fff;
 }
 
+.garis {
+    border: 5px solid;
+    max-width: 90%;
+    margin: 0 auto 30px auto;
+    color: #008080;
+    border-radius: 10px;
+}
+
 .parents {
     display: flex;
     margin-bottom: 30px;
 }
 
 .parents h1 {
-    font-size: 0.9em;
-    color: #fff;
+    font-size: 20px;
+    color: black;
 }
 
 .parents p {
     margin: 10px 0;
-    font-size: 0.9em;
-    color: #fff;
+    font-size: 15px;
+    color: black;
 }
 
 .parents > img {
@@ -169,18 +185,180 @@ body {
     margin-bottom: 10px;
 }
 
-footer {
-    background: #353935;
-    color: #fff;
+section {
+    width: 100%;
+    display: inline-block;
+    background: #333;
+    height: 50vh;
     text-align: center;
-    padding: 10px;
-    font-size: 0.8em;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.footer-distributed {
+    background: #008080;
+    box-sizing: border-box;
+    width: 100%; /* Sesuaikan dengan lebar konten lainnya */
+    margin: auto; /* Pusatkan footer secara horizontal */
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span {
+    color: black;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #222;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: blue;
+    text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .container {
-        width: 90%;
+    .container,
+    .comment,
+    .footer-distributed {
+        width: 100%;
         padding: 15px;
     }
     .commentbox {
@@ -195,7 +373,7 @@ footer {
         width: 100%;
     }
     .user {
-        width:  100%;
+        width: 100%;
         margin-left: 0;
     }
     .commentinput > textarea {
@@ -208,11 +386,24 @@ footer {
     .buttons > button {
         margin-bottom: 10px;
     }
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 480px) {
-    .container {
-        width: 95%;
+    .container,
+    .comment,
+    .footer-distributed {
+        width: 100%;
         padding: 10px;
     }
     .head {
@@ -224,5 +415,16 @@ footer {
     }
     .buttons > button {
         font-size: 0.8em;
+    }
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
     }
 }

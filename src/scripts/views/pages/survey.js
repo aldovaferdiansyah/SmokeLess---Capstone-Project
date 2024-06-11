@@ -52,15 +52,15 @@ const Survey = {
               <input type="radio" name="occupation" value="0" /> Lainnya<br /><br />              
 
               <p>5. Berapa banyak Anda merokok dalam sehari?</p>
-              <input type="radio" name="q1" value="0" /> < 10 batang/hari<br />
-              <input type="radio" name="q1" value="1" /> 11-20 batang/hari<br />
-              <input type="radio" name="q1" value="2" /> 21-30 batang/hari<br />
-              <input type="radio" name="q1" value="3" /> >30 batang/hari<br /><br />
+              <input type="radio" name="q1" value="1" /> < 10 batang/hari<br />
+              <input type="radio" name="q1" value="2" /> 11-20 batang/hari<br />
+              <input type="radio" name="q1" value="3" /> 21-30 batang/hari<br />
+              <input type="radio" name="q1" value="4" /> >30 batang/hari<br /><br />
           
               <p>6. Seberapa cepat Anda merokok setelah bangun tidur?</p>
-              <input type="radio" name="q2" value="2" /> 5 menit setelah bangun tidur<br />
-              <input type="radio" name="q2" value="1" /> 6-30 menit setelah bangun tidur<br />
-              <input type="radio" name="q2" value="0" /> > 30 menit setelah bangun tidur<br /><br />
+              <input type="radio" name="q2" value="3" /> 5 menit setelah bangun tidur<br />
+              <input type="radio" name="q2" value="2" /> 6-30 menit setelah bangun tidur<br />
+              <input type="radio" name="q2" value="1" /> > 30 menit setelah bangun tidur<br /><br />
           
               <p>7. Apakah Anda merasa kesulitan untuk tidak merokok di “no smoking area”?</p>
               <input type="radio" name="q3" value="1" /> Ya<br />
@@ -186,11 +186,11 @@ const Survey = {
       }
 
       // Menghitung persentase
-   var persentase = (skor / 9) * 100;
+   var persentase = (skor / 11) * 100;
 
    // Menentukan warna progress bar berdasarkan tingkat kecanduan
    var barClass = "";
-   if (skor <= 4) {
+   if (skor <= 2) {
      barClass = "low";
    } else if (skor <= 4) {
      barClass = "medium";
